@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmhu1c5nteyrs"]
+
+[ext_resource type="Script" path="res://presente.gd" id="1_8xqnq"]
+[ext_resource type="Texture2D" uid="uid://coqy870ruwrx2" path="res://Assets/Sprites/SpritesSheet.sprites/knife.tres" id="2_ay2la"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v42i1"]
+size = Vector2(6, 20)
+
+[node name="Knife" type="Area2D"]
+script = ExtResource("1_8xqnq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_v42i1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-6.25, -1.19209e-07)
+scale = Vector2(0.07, 0.088)
+texture = ExtResource("2_ay2la")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

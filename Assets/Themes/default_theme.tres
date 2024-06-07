@@ -1,0 +1,32 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://b21fhwoouwb67"]
+
+[ext_resource type="FontFile" uid="uid://ddibml5iafxuj" path="res://Assets/Fonts/Early GameBoy.ttf" id="1_1mbud"]
+[ext_resource type="Texture2D" uid="uid://7rhb2nxyv2rx" path="res://Assets/Sprites/pixil-frame-0 (1).png" id="1_j2q71"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oci7d"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bw4hy"]
+texture = ExtResource("1_j2q71")
+texture_margin_left = 35.0
+expand_margin_left = 35.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8e307"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y7jj4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5q8k7"]
+
+[resource]
+default_font = ExtResource("1_1mbud")
+default_font_size = 8
+Button/colors/font_color = Color(0.717647, 0, 0.0784314, 1)
+Button/colors/font_focus_color = Color(0.945098, 0, 0.262745, 1)
+Button/colors/font_pressed_color = Color(0.207843, 0.266667, 0.380392, 1)
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/styles/disabled = SubResource("StyleBoxEmpty_oci7d")
+Button/styles/focus = SubResource("StyleBoxTexture_bw4hy")
+Button/styles/hover = SubResource("StyleBoxEmpty_8e307")
+Button/styles/normal = SubResource("StyleBoxEmpty_y7jj4")
+Button/styles/pressed = SubResource("StyleBoxEmpty_5q8k7")

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dt8tkcbrh2d7w"]
+
+[ext_resource type="Script" path="res://presente.gd" id="1_5oqt8"]
+[ext_resource type="Texture2D" uid="uid://d4am4rpr6f073" path="res://Assets/Sprites/SpritesSheet.sprites/isqueiro.tres" id="2_bfh53"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2k3c1"]
+size = Vector2(7, 18)
+
+[node name="lighter" type="Area2D"]
+script = ExtResource("1_5oqt8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2k3c1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_bfh53")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

@@ -1,0 +1,217 @@
+[gd_scene load_steps=16 format=3 uid="uid://cegavqrn4rno7"]
+
+[ext_resource type="Texture2D" uid="uid://v3e553rmxn2a" path="res://Assets/Sprites/SpritesSheet.sprites/balao.tres" id="1_7lowa"]
+[ext_resource type="Script" path="res://Scripts/menu_back.gd" id="1_120ho"]
+[ext_resource type="Texture2D" uid="uid://bu114lqixolu4" path="res://Assets/Sprites/SpritesSheet.sprites/candy.tres" id="2_jrm4s"]
+[ext_resource type="Texture2D" uid="uid://8tovwu25in5u" path="res://Assets/Sprites/SpritesSheet.sprites/brigadeiro.tres" id="3_3xe1m"]
+[ext_resource type="Script" path="res://Scripts/back_layers.gd" id="3_ooarf"]
+[ext_resource type="Texture2D" uid="uid://c44xsfo7rrwra" path="res://Assets/Sprites/SpritesSheet.sprites/cachorro_quente.tres" id="4_ryxh0"]
+[ext_resource type="Texture2D" uid="uid://o87fryda4l1m" path="res://Assets/Sprites/SpritesSheet.sprites/chapeu.tres" id="5_1v0ud"]
+[ext_resource type="Texture2D" uid="uid://bcntuosfwfdkc" path="res://Assets/Sprites/SpritesSheet.sprites/copo_normal.tres" id="7_oado3"]
+[ext_resource type="Texture2D" uid="uid://dfq40gyc25w6c" path="res://Assets/Sprites/SpritesSheet.sprites/cozinha.tres" id="8_whnp6"]
+[ext_resource type="Texture2D" uid="uid://c15h854skim73" path="res://Assets/Sprites/SpritesSheet.sprites/fork.tres" id="9_178yc"]
+[ext_resource type="Texture2D" uid="uid://cys6s7epokdmg" path="res://Assets/Sprites/SpritesSheet.sprites/prato.tres" id="10_chj44"]
+[ext_resource type="Texture2D" uid="uid://xv225cpln3fm" path="res://Assets/Sprites/SpritesSheet.sprites/hamburguer.tres" id="12_4p74u"]
+[ext_resource type="Texture2D" uid="uid://c4p3oa70ylfjv" path="res://Assets/Sprites/SpritesSheet.sprites/pizza.tres" id="13_hkkmb"]
+[ext_resource type="Texture2D" uid="uid://cutcd62voydue" path="res://Assets/Sprites/SpritesSheet.sprites/Refri.tres" id="15_r5wmh"]
+[ext_resource type="Texture2D" uid="uid://dj1dpuble7xk" path="res://Assets/Sprites/SpritesSheet.sprites/presente.tres" id="16_7nf12"]
+
+[node name="MenuBack" type="ParallaxBackground"]
+script = ExtResource("1_120ho")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.992157, 0.862745, 0.384314, 1)
+
+[node name="BallonsLayer" type="ParallaxLayer" parent="."]
+unique_name_in_owner = true
+motion_mirroring = Vector2(0, 240)
+
+[node name="TextureRect" type="TextureRect" parent="BallonsLayer"]
+offset_left = 3.0
+offset_top = 203.0
+offset_right = 32.0
+offset_bottom = 232.0
+texture = ExtResource("1_7lowa")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="BallonsLayer"]
+offset_left = 71.0
+offset_top = 180.0
+offset_right = 100.0
+offset_bottom = 209.0
+texture = ExtResource("1_7lowa")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="BallonsLayer"]
+offset_left = 6.0
+offset_top = 123.0
+offset_right = 35.0
+offset_bottom = 152.0
+texture = ExtResource("1_7lowa")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect4" type="TextureRect" parent="BallonsLayer"]
+offset_left = 129.0
+offset_top = 108.0
+offset_right = 158.0
+offset_bottom = 137.0
+texture = ExtResource("1_7lowa")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect5" type="TextureRect" parent="BallonsLayer"]
+offset_left = 9.0
+offset_top = 13.0
+offset_right = 38.0
+offset_bottom = 42.0
+texture = ExtResource("1_7lowa")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect7" type="TextureRect" parent="BallonsLayer"]
+offset_left = 118.0
+offset_top = 16.0
+offset_right = 147.0
+offset_bottom = 45.0
+texture = ExtResource("1_7lowa")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="FastLayer" type="ParallaxLayer" parent="."]
+unique_name_in_owner = true
+motion_mirroring = Vector2(0, 240)
+script = ExtResource("3_ooarf")
+
+[node name="TextureRect" type="TextureRect" parent="FastLayer"]
+offset_left = 119.0
+offset_top = 69.0
+offset_right = 137.0
+offset_bottom = 87.0
+pivot_offset = Vector2(9, 9)
+texture = ExtResource("3_3xe1m")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="FastLayer"]
+offset_left = 123.0
+offset_top = 167.0
+offset_right = 145.0
+offset_bottom = 189.0
+pivot_offset = Vector2(11, 11)
+texture = ExtResource("4_ryxh0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="FastLayer"]
+offset_left = 12.0
+offset_top = 83.0
+offset_right = 34.0
+offset_bottom = 105.0
+pivot_offset = Vector2(11, 11)
+texture = ExtResource("2_jrm4s")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect4" type="TextureRect" parent="FastLayer"]
+offset_left = 75.0
+offset_top = -1.0
+offset_right = 119.0
+offset_bottom = 43.0
+pivot_offset = Vector2(22, 22)
+texture = ExtResource("5_1v0ud")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect5" type="TextureRect" parent="FastLayer"]
+offset_left = 51.0
+offset_top = 117.0
+offset_right = 83.0
+offset_bottom = 149.0
+pivot_offset = Vector2(16, 16)
+texture = ExtResource("7_oado3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect6" type="TextureRect" parent="FastLayer"]
+offset_left = 111.0
+offset_top = 146.0
+offset_right = 127.0
+offset_bottom = 162.0
+pivot_offset = Vector2(8, 8)
+texture = ExtResource("8_whnp6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect7" type="TextureRect" parent="FastLayer"]
+offset_left = 10.0
+offset_top = 148.0
+offset_right = 38.0
+offset_bottom = 176.0
+pivot_offset = Vector2(14, 14)
+texture = ExtResource("9_178yc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect8" type="TextureRect" parent="FastLayer"]
+offset_left = 33.0
+offset_top = 141.0
+offset_right = 63.0
+offset_bottom = 171.0
+pivot_offset = Vector2(15, 15)
+texture = ExtResource("10_chj44")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SlowLayer" type="ParallaxLayer" parent="."]
+unique_name_in_owner = true
+motion_mirroring = Vector2(0, 240)
+script = ExtResource("3_ooarf")
+
+[node name="TextureRect" type="TextureRect" parent="SlowLayer"]
+offset_left = 33.0
+offset_top = 22.0
+offset_right = 63.0
+offset_bottom = 52.0
+rotation = 6.28319
+pivot_offset = Vector2(15, 15)
+texture = ExtResource("12_4p74u")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="SlowLayer"]
+offset_left = 84.0
+offset_top = 50.0
+offset_right = 114.0
+offset_bottom = 80.0
+pivot_offset = Vector2(15, 15)
+texture = ExtResource("13_hkkmb")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect4" type="TextureRect" parent="SlowLayer"]
+offset_left = 32.0
+offset_top = 210.0
+offset_right = 52.0
+offset_bottom = 230.0
+pivot_offset = Vector2(10, 10)
+texture = ExtResource("15_r5wmh")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect5" type="TextureRect" parent="SlowLayer"]
+offset_left = 91.0
+offset_top = 83.0
+offset_right = 121.0
+offset_bottom = 113.0
+pivot_offset = Vector2(15, 15)
+texture = ExtResource("16_7nf12")
+expand_mode = 1
+stretch_mode = 5

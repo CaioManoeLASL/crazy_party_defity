@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=3 uid="uid://bbs54oii5r6v3"]
+
+[ext_resource type="Theme" uid="uid://b21fhwoouwb67" path="res://Assets/Themes/default_theme.tres" id="1_woume"]
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="2_60vom"]
+[ext_resource type="PackedScene" uid="uid://cegavqrn4rno7" path="res://Scenes/MenuBack.tscn" id="3_j6t4s"]
+[ext_resource type="AudioStream" uid="uid://dw2dbuxm6243" path="res://Assets/Sounds/Musics/funny-happy-birthday-156940.mp3" id="4_dy6mc"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_woume")
+script = ExtResource("2_60vom")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -25.0
+offset_right = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.894118, 0, 0.247059, 1)
+theme_override_font_sizes/font_size = 14
+text = "CRAZY PARTY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonsVBox" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="StoryModeButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonsVBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../QuitButton")
+focus_neighbor_bottom = NodePath("../QuitButton")
+focus_next = NodePath("../QuitButton")
+focus_previous = NodePath("../QuitButton")
+theme_override_font_sizes/font_size = 12
+text = "PLAY"
+
+[node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonsVBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../StoryModeButton")
+focus_neighbor_bottom = NodePath("../StoryModeButton")
+focus_next = NodePath("../StoryModeButton")
+focus_previous = NodePath("../StoryModeButton")
+theme_override_font_sizes/font_size = 12
+text = "Quit"
+
+[node name="MenuBack" parent="." instance=ExtResource("3_j6t4s")]
+layer = -1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_dy6mc")
+volume_db = -7.428
+autoplay = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonsVBox/StoryModeButton" to="." method="_on_story_mode_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonsVBox/QuitButton" to="." method="_on_quit_button_pressed"]

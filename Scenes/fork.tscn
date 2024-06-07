@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://7j6i75rn5box"]
+
+[ext_resource type="Script" path="res://presente.gd" id="1_p7bkg"]
+[ext_resource type="Texture2D" uid="uid://c15h854skim73" path="res://Assets/Sprites/SpritesSheet.sprites/fork.tres" id="2_cxxcp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1f53e"]
+size = Vector2(12, 13)
+
+[node name="fork" type="Area2D"]
+script = ExtResource("1_p7bkg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0.5)
+shape = SubResource("RectangleShape2D_1f53e")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3.57628e-07, -3.57628e-07)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("2_cxxcp")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://ncuen1w70evi"]
+
+[ext_resource type="PackedScene" uid="uid://ce8hxij1v2gbg" path="res://Scenes/world.tscn" id="1_3pl6n"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_mh1m3"]
+[ext_resource type="AudioStream" uid="uid://jkg2afgcten0" path="res://Assets/Sounds/Musics/happy-birthday-mr-jones-master-track-207394.mp3" id="2_68klm"]
+[ext_resource type="PackedScene" uid="uid://cb2qluqoi8knx" path="res://Scenes/player.tscn" id="2_o5hqd"]
+[ext_resource type="PackedScene" uid="uid://b6w083j4t8kmo" path="res://Scenes/UI.tscn" id="6_o7r1q"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_mh1m3")
+
+[node name="game" type="Node2D" parent="."]
+
+[node name="World" parent="game" instance=ExtResource("1_3pl6n")]
+
+[node name="Player" parent="game" instance=ExtResource("2_o5hqd")]
+position = Vector2(80, 208)
+
+[node name="Objects" type="Node" parent="game"]
+
+[node name="Ui" parent="game" instance=ExtResource("6_o7r1q")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="game"]
+stream = ExtResource("2_68klm")
+volume_db = -7.429
+autoplay = true
+
+[node name="Camera2D" type="Camera2D" parent="game"]
+position = Vector2(80, 120)
+
+[node name="Timer" type="Timer" parent="game"]
+wait_time = 7.0
+autostart = true
+
+[connection signal="timeout" from="game/Timer" to="." method="_on_timer_timeout"]

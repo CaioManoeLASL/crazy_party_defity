@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5mg10tc1m53i"]
+
+[ext_resource type="Script" path="res://presente.gd" id="1_j8355"]
+[ext_resource type="Texture2D" uid="uid://8tovwu25in5u" path="res://Assets/Sprites/SpritesSheet.sprites/brigadeiro.tres" id="2_q7ewb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3r6ut"]
+size = Vector2(18, 20)
+
+[node name="Brigadier" type="Area2D"]
+script = ExtResource("1_j8355")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_3r6ut")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_q7ewb")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

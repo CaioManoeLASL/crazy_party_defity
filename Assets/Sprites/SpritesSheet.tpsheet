@@ -1,0 +1,423 @@
+{
+	"textures": [
+		{
+			"image": "SpritesSheet.png",
+			"size": {
+				"w": 1002,
+				"h": 1758
+			},
+			"sprites": [
+				{
+					"filename": "run/run1-removebg-preview.png",
+					"region": {
+						"x": 0,
+						"y": 0,
+						"w": 72,
+						"h": 141
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "run/run2-removebg-preview.png",
+					"region": {
+						"x": 72,
+						"y": 0,
+						"w": 72,
+						"h": 141
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "run/run3-removebg-preview.png",
+					"region": {
+						"x": 144,
+						"y": 0,
+						"w": 74,
+						"h": 141
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "run/run4-removebg-preview.png",
+					"region": {
+						"x": 218,
+						"y": 0,
+						"w": 74,
+						"h": 141
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "run/run5-removebg-preview.png",
+					"region": {
+						"x": 292,
+						"y": 0,
+						"w": 72,
+						"h": 141
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "run/run6-removebg-preview.png",
+					"region": {
+						"x": 364,
+						"y": 0,
+						"w": 74,
+						"h": 141
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "idle-removebg-preview.png",
+					"region": {
+						"x": 438,
+						"y": 0,
+						"w": 72,
+						"h": 145
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "cozinha.png",
+					"region": {
+						"x": 510,
+						"y": 0,
+						"w": 180,
+						"h": 180
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "brigadeiro.png",
+					"region": {
+						"x": 690,
+						"y": 0,
+						"w": 212,
+						"h": 189
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "pizza.png",
+					"region": {
+						"x": 0,
+						"y": 189,
+						"w": 192,
+						"h": 192
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "candy.png",
+					"region": {
+						"x": 192,
+						"y": 189,
+						"w": 200,
+						"h": 200
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Refri.png",
+					"region": {
+						"x": 392,
+						"y": 189,
+						"w": 200,
+						"h": 200
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "confete.png",
+					"region": {
+						"x": 592,
+						"y": 189,
+						"w": 194,
+						"h": 206
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "balao.png",
+					"region": {
+						"x": 786,
+						"y": 189,
+						"w": 216,
+						"h": 216
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "cachorro_quente.png",
+					"region": {
+						"x": 0,
+						"y": 405,
+						"w": 226,
+						"h": 223
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "hamburguer.png",
+					"region": {
+						"x": 226,
+						"y": 405,
+						"w": 225,
+						"h": 225
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "prato.png",
+					"region": {
+						"x": 451,
+						"y": 405,
+						"w": 225,
+						"h": 225
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "juice.png",
+					"region": {
+						"x": 676,
+						"y": 405,
+						"w": 240,
+						"h": 240
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "fork.png",
+					"region": {
+						"x": 0,
+						"y": 645,
+						"w": 250,
+						"h": 250
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "isqueiro.png",
+					"region": {
+						"x": 250,
+						"y": 645,
+						"w": 250,
+						"h": 250
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "knife.png",
+					"region": {
+						"x": 500,
+						"y": 645,
+						"w": 250,
+						"h": 250
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "presente.png",
+					"region": {
+						"x": 750,
+						"y": 645,
+						"w": 250,
+						"h": 250
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Bolo.png",
+					"region": {
+						"x": 0,
+						"y": 895,
+						"w": 239,
+						"h": 262
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "chapeu.png",
+					"region": {
+						"x": 239,
+						"y": 895,
+						"w": 300,
+						"h": 300
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "copo_normal.png",
+					"region": {
+						"x": 539,
+						"y": 895,
+						"w": 337,
+						"h": 363
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "spoon.png",
+					"region": {
+						"x": 0,
+						"y": 1258,
+						"w": 359,
+						"h": 382
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "water_bootle.png",
+					"region": {
+						"x": 359,
+						"y": 1258,
+						"w": 500,
+						"h": 500
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:e6f62debacf4698bf4cac695017c3890:9d7b5397319f833a82207ee73537f307:0ddf31c5e0c13eea116c9355d2826564$"
+	}
+}

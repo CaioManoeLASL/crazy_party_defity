@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cev6eia1o6aip"]
+
+[ext_resource type="Script" path="res://presente.gd" id="1_71aux"]
+[ext_resource type="Texture2D" uid="uid://dfq40gyc25w6c" path="res://Assets/Sprites/SpritesSheet.sprites/cozinha.tres" id="2_umdkw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q0wbm"]
+size = Vector2(17, 18)
+
+[node name="Snack" type="Area2D"]
+script = ExtResource("1_71aux")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_q0wbm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_umdkw")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

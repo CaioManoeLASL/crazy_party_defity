@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://crkkxb5p0xhq6"]
+
+[ext_resource type="Script" path="res://presente.gd" id="1_n2qo3"]
+[ext_resource type="Texture2D" uid="uid://v3e553rmxn2a" path="res://Assets/Sprites/SpritesSheet.sprites/balao.tres" id="2_6rr3j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3r6ut"]
+size = Vector2(18, 20)
+
+[node name="Balloon" type="Area2D"]
+script = ExtResource("1_n2qo3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_3r6ut")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_6rr3j")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

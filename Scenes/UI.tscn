@@ -1,0 +1,97 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6w083j4t8kmo"]
+
+[ext_resource type="Script" path="res://Scripts/UI.gd" id="1_ne4ub"]
+[ext_resource type="FontFile" uid="uid://ddibml5iafxuj" path="res://Assets/Fonts/Early GameBoy.ttf" id="2_3pa5u"]
+[ext_resource type="Theme" uid="uid://b21fhwoouwb67" path="res://Assets/Themes/default_theme.tres" id="2_q23qa"]
+
+[node name="Ui" type="CanvasLayer"]
+script = ExtResource("1_ne4ub")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_q23qa")
+metadata/_edit_use_anchors_ = true
+
+[node name="objetoCorreto" type="Label" parent="Control"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_top = 37.0
+offset_right = 160.0
+offset_bottom = 60.0
+theme_override_fonts/font = ExtResource("2_3pa5u")
+text = "Palavra"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScoreLabel" type="Label" parent="Control/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_3pa5u")
+theme_override_font_sizes/font_size = 8
+text = "SCORE: 0"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Control/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="Control/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect4" type="TextureRect" parent="Control/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect5" type="TextureRect" parent="Control/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+
+[node name="ButtonsVBox" type="VBoxContainer" parent="Control/MarginContainer/CenterContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/MarginContainer/CenterContainer/ButtonsVBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3pa5u")
+text = "GAME OVER"
+
+[node name="RESTART" type="Button" parent="Control/MarginContainer/CenterContainer/ButtonsVBox"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../QUIT")
+focus_neighbor_bottom = NodePath("../QUIT")
+focus_next = NodePath("../QUIT")
+focus_previous = NodePath("../QUIT")
+text = "RESTART"
+
+[node name="QUIT" type="Button" parent="Control/MarginContainer/CenterContainer/ButtonsVBox"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../RESTART")
+focus_neighbor_bottom = NodePath("../RESTART")
+focus_next = NodePath("../RESTART")
+focus_previous = NodePath("../RESTART")
+text = "QUIT"
+
+[connection signal="pressed" from="Control/MarginContainer/CenterContainer/ButtonsVBox/RESTART" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/CenterContainer/ButtonsVBox/QUIT" to="." method="_on_quit_pressed"]
